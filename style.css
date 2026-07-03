@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F1EA;
+    font-family: 'Noto Serif SC', '华文宋体', 'STSong', 'SimSun', 'Songti SC', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #4A4540;
+    letter-spacing: 0.03em;
+}
+
+/* 主卡片 (Container)*/
+.container {
+    background-color: rgba(255, 253, 249, 0.85); 
+    padding: 30px 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(170, 202, 192, 0.2);
+    width: 90%;
+    max-width: 480px;
+    border: 1px solid rgba(220, 213, 202, 0.6);
+    position: relative; 
+    backdrop-filter: blur(10px); 
+    margin: 40px 0;
+}
+
+/* 顶部拱门区域 */
+.arch-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.arch-window {
+    width: 90px;
+    height: 50px;
+    background-color: #E1C79F;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    border: 3px solid #5A5550;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 虚线轨迹 */
+.dotted-line {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-image: linear-gradient(to right, #AACAC0 50%, transparent 50%);
+    background-size: 10px 100%;
+    transform: rotate(-15deg);
+}
+
+.star {
+    font-size: 22px;
+    color: #5A5550;
+    margin: 0 12px;
+    padding-bottom: 5px;
+}
+
+/* 书页卡片内容 */
+.book-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 25px 20px;
+    border: 1px solid #E5DFD4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-content h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #423E3A;
+    font-weight: 900; 
+}
+
+.page-content .main-text {
+    font-size: 16px;
+    line-height: 2; 
+    color: #6B6660;
+    margin-bottom: 12px;
+}
+
+.page-content .sub-text {
+    font-size: 14px;
+    color: #A59D94;
+}
+
+/* 底部 */
+.footer-note {
+    text-align: center;
+    color: #A59D94;
+    font-size: 13px;
+}
+
+.github-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #7A756F;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+.github-link:hover {
+    color: #5A5550;
+    border-bottom-color: #AACAC0;
+    transform: translateY(-2px);
+}
+
+.magic-btn {
+    margin-top: 6px;
+    background-color: #AACAC0;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit; 
+    transition: all 0.3s;
+}
+
+.magic-btn:hover {
+    background-color: #8CABA5;
+}
+
+.magic-btn:disabled {
+    background-color: #C2B9AE;
+    cursor: not-allowed;
+}
+
+/*手机响应式适配 */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    .page-content h1 {
+        font-size: 26px;
+    }
+}
